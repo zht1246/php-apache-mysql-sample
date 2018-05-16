@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="/skin/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/jquery.bxslider.css" />
+<script type="text/javascript" src="/skin/js/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.superslide.2.1.1.js"></script>
+<script type="text/javascript" src="/skin/js/form.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.bxslider.js"></script>
+<style>
+.theme_color {
+	background-color: #9c541a;
+}
+</style>
+</head>
+<!-- 头部 -->
+
+{dede:include filename="head.htm"/} 
+<!--g_nav end-->
+<div class="clear"></div>
+
+<!-- 头部 end --> 
+
+<!-- banner --> 
+<a>
+<div class="sub_banner" style=" background:url(/skin/images/banner.jpg) no-repeat top center;">
+  <div class="sub_banner_line"><img src="/skin/images/sub03.png" /></div>
+</div>
+</a> <!-- banner --> 
+
+<!-- 图标导航 -->
+<div class="product sub_pro"> 
+  <!--left-->
+  <div class="sub_pro01">
+    <div class="sub_pro02">
+      <div class="product07"><b>{dede:field name='typeid' function="GetTopTypename(@me)"/}</b></div>
+      <!--left nav-->
+      <div class="sidenav">
+        <ul>
+          {dede:channel type='son' currentstyle="
+          <li><a href='~typelink~' class='sidenava cu'>
+            <p>~typename~</p>
+            </a></li>
+          "}
+          <li> <a href="[field:typeurl/]" title="[field:typename/]" class="sidenava">
+            <p><!----> [field:typename/]</p>
+            </a> </li>
+          {/dede:channel}
+        </ul>
+      </div>
+    </div>
+    <div class="sub_lx">
+      <div class="sub_lx01">咨询热线<br />
+        {dede:global.cfg_tel/}<br />
+        地址：{dede:global.cfg_add/}<br />
+        传真：{dede:global.cfg_fax/}</div>
+    </div>
+  </div>
+  
+  <!--left end-->
+  <div class="product02">
+    <div class="content_com_title">
+      <h2><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></h2>
+      <div class="bread"> 当前位置：{dede:field name='position'/} </div>
+    </div>
+    <div class="content">
+      <ul class="product3">
+        {dede:list pagesize ='9'}
+        <li>
+          <div> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"/></a> </div>
+          <p><a href="[field:arcurl/]" title="[field:title/]" class="pg-color">[field:title/]</a></p>
+        </li>
+        {/dede:list}
+        <div class="clear"></div>
+      </ul>
+      <div class="pagination-wrapper">
+        <div class="pagination"> {dede:pagelist listsize='5' listitem='index,end,pre,next,pageno'/} </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!-- 图标导航 end--> 
+
+<!-- footer --> 
+
+<!--footer--> 
+{dede:include filename="footer.htm"/}
+</body></html>

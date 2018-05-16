@@ -1,0 +1,62 @@
+<div class="header theme_color1">
+  <div class="main">
+    <div class="logo"><a href="/" title="{dede:global.cfg_webname/}"><img src="/skin/images/logo.png" alt="{dede:global.cfg_webname/}" /></a></div>
+    <div class="tel"><!--<span>— 咨询热线 —</span>--><!--<img src="/skin/images/tel.png" />-->{dede:global.cfg_tel/}</div>
+    
+    <!--搜索区域-->
+    <div class="search_btn"><img src="/skin/images/ssbtn.png" /></div>
+    <div class="search01">
+      <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <div class="search02">
+          <input name="q" type="text" class="search03" placeholder="请输入关键字..." />
+        </div>
+        <div class="search02">
+          <input name="submit" type="submit" class="search04" value="搜索" />
+        </div>
+      </form>
+    </div>
+    <script>
+    	$(function(){
+			$('.jslct dl dd').click(function(){
+				$(this).closest('form').attr('action',$(this).attr('val'));
+			});
+			///
+			$(".search_btn").click(function(){
+				$(".search01").slideToggle("slow");
+			});////
+		})
+
+
+
+    </script> 
+    <!--搜索区域 end--> 
+    
+  </div>
+</div>
+<!--header end-->
+
+<style>
+.ihome a{ background:url(/skin/images/home.png) no-repeat top center; color:#f7b786; padding:0 8px;}
+.ihome a:hover{background:url(/skin/images/home.png) no-repeat top center;  color:#f7b786;}
+</style>
+
+<!--g_nav-->
+<div class="g_nav">
+  <div class="g_nav01">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="ihome"><a class="now"href="/" title="首页">首页<br />
+          <!-- <span></span> -->
+          <div></div>
+          </a></td>
+        {dede:channelartlist typeid='top'}
+        <td><a href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">{dede:field name='typename'/}<br />
+          <!-- <span></span> -->
+          <div></div>
+          </a>
+          <div class="nav_tan"> {dede:channel type='son' noself='yes'} <a href="[field:typeurl/]">[field:typename/]</a> {/dede:channel} </div></td>
+        {/dede:channelartlist} </tr>
+    </table>
+  </div>
+</div>

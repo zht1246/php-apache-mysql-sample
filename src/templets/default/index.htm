@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by dede58.com" />
+<link rel="stylesheet" type="text/css" href="/skin/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/jquery.bxslider.css" />
+<script type="text/javascript" src="/skin/js/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.superslide.2.1.1.js"></script>
+<script type="text/javascript" src="/skin/js/form.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.bxslider.js"></script>
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<style>
+.theme_color {
+	background-color: #9c541a;
+}
+</style>
+</head>
+
+<body>
+<!-- 头部 --> 
+{dede:include filename="head.htm"/} 
+<!--g_nav end-->
+<div class="clear"></div>
+
+<!-- 头部 end --> 
+
+<!--banner-->
+<div id="slideBox" class="slideBox">
+  <div class="hd">
+    <ul>
+      <li>&nbsp;</li>
+      <li>&nbsp;</li>
+      <li>&nbsp;</li>
+    </ul>
+  </div>
+  <div class="bd">
+    <ul>
+      {dede:arclist typeid='14' row='3' titlelen='50' orderby='pubdate'}
+      <li><a style="background:url([field:picname/]) no-repeat top center;"></a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
+<script type="text/javascript">
+		$(function(){
+		jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true}); //banner
+		jQuery(".slideBox02").slide({mainCell:".bd02 ul",effect:"left",autoPlay:true,trigger:"click"}); //shouye banji
+
+		});
+</script>
+<div class="index_gg" style="background-image:url(/skin/images/aa.jpg);background-size:100%"> </div>
+<div class="clear"></div>
+<div class="clear"></div>
+<div class="index_pro00" style="background-image:url(/skin/images/bb.jpg);background-repeat: no-repeat; background-position:top center;"> 
+  
+  <!---->
+  
+  <div class="index_pro01">
+    <div class="index_hovor02">产品中心</div>
+    <div class="index_pro02"> 
+      
+      <!--滚动开始-->
+      <div class="picScroll-left01">
+        <div class="hd"> <a class="next"></a>
+          <ul>
+          </ul>
+          <a class="prev"></a> <span class="pageState" style="display:none;"></span> </div>
+        <div class="bd">
+          <ul class="picList">
+            {dede:arclist typeid='2' row='9' titlelen='50' orderby='pubdate'}
+            <li><a class="chanpin00" href="[field:arcurl/]" title="[field:title/]">
+              <div class="index_pro03">
+                <div class="index_pro04">- [field:title/] -</div>
+              </div>
+              <img src="[field:picname/]" width="203" height="259" alt="[field:title/]" /></a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+		jQuery(".picScroll-left01").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:3,trigger:"click"});
+		</script> 
+      
+      <!--滚动开始 end--> 
+      
+    </div>
+  </div>
+  <!--end--> 
+  
+</div>
+<script language="javascript">
+			$(function(){
+				$(".chanpin00").hover(
+					function(){
+						$(this).children(".index_pro03").fadeIn(200);
+					}, 
+					function(){
+						$(this).children(".index_pro03").fadeOut(200);
+					});	
+			});
+		  </script>
+<div class="clear"></div>
+<div class="index_case01" style="background-image:url(skin/images/cc.jpg);background-repeat:no-repeat; background-position:top center;"> 
+  
+  <!---->
+  <div class="index_case02">
+    <div class="index_about01">成功案例</div>
+    <div class="index_case03"><img src="/skin/images/case05.png" alt="" /></div>
+    
+    <!---->
+    <div class="index_case04"> {dede:arclist typeid='9' row='4' titlelen='50' orderby='pubdate'}
+      <dl>
+        <dt><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" height="180" alt="[field:title/]" /></a></dt>
+      </dl>
+      {/dede:arclist} </div>
+    <!--end-->
+    
+    <div class="index_case05"> 
+      <!--效果开始-->
+      <div class="slideBox02">
+        <div class="hd">
+          <ul>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul>
+            {dede:arclist typeid='9' row='2' titlelen='50' orderby='pubdate'}
+            <li>
+              <div class="index_case06"><a href="[field:arcurl/]" title="[field:title/]">
+                <div class="index_case07"><span>[field:title/]</span>[field:description function="cn_substr(@me,60)"/]...</div>
+                <img src="[field:picname/]" height="376" alt="[field:title/]" /></a></div>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
+      <script type="text/javascript">
+		jQuery(".slideBox02").slide({mainCell:".bd ul",autoPlay:true});
+		</script> 
+      <!--效果开始 end--> 
+    </div>
+    <div class="clear"></div>
+    <div class="index_hovor04" style=" padding-top:12px;">{dede:type typeid='9'} <a href="[field:typelink/]" title="更多 +">更多 +</a>{/dede:type} </div>
+  </div>
+  
+  <!----> 
+  
+</div>
+<div class="clear"></div>
+<div class="index_about" style="background-image:url(/skin/images/dd.jpg);backg/round-size:100%;background-repeat:no-repeat; background-position:top center;"> 
+  
+  <!--关于我们-->
+  <div class="index_about01">关于我们</div>
+  <div class="index_about02">
+    <div class="index_about03"> {dede:sql sql='Select content from dede_arctype where id=1'} 
+      
+      [field:content  function='cn_substr(html2text(@me),400)'/]...
+      
+      {/dede:sql} </div>
+    <div class="clear"></div>
+    <div class="index_about04">{dede:global.cfg_webname/}</div>
+    <div style="font-size:14px; color:#461d00; text-align:right; padding-right:44px; padding-top:11px;">KaFei Network Technology Co., Ltd., Net business opportunities!</div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+<div class="index_hovor"> 
+  
+  <!---->
+  <div class="index_hovor01">
+    <div class="index_hovor02">资质荣誉</div>
+    <div class="index_hovor03"> 
+      
+      <!--滚动开始-->
+      <div class="picScroll-left">
+        <div class="hd"> <a class="next"></a>
+          <ul>
+          </ul>
+          <a class="prev"></a> <span class="pageState" style="display:none;"></span> </div>
+        <div class="bd">
+          <ul class="picList">
+            {dede:arclist typeid='7' row='9' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]" /></a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+		jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:3,trigger:"click"});
+		</script> 
+      
+      <!--滚动开始 end-->
+      <div class="index_hovor04">{dede:type typeid='7'} <a href="[field:typelink/]" title="更多 +">更多 +</a>{/dede:type} </div>
+    </div>
+  </div>
+  <!--end--> 
+  
+</div>
+<div class="clear"></div>
+<div class="index_news" style="background-image:url(/skin/images/ee.jpg);background-size:auto 100%"> 
+  
+  <!--新闻资讯-->
+  <div class="index_news01">
+    <div class="index_news02">新闻资讯<span>News</span></div>
+    <!--效果开始-->
+    <div class="slideBox01">
+      <div class="hd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          {dede:arclist typeid='13' row='2' titlelen='50' orderby='pubdate'}
+          <li>
+            <div class="index_news03">
+              <dl>
+                <dt><a href="[field:arcurl/]" title="[field:title/]" style="background:url([field:picname/]) no-repeat center center; background-size:cover;"></a></dt>
+                <dd><a href="[field:arcurl/]" title="[field:title/]"><strong>·</strong>&nbsp;&nbsp;[field:title/]</a><span>[field:description function="cn_substr(@me,120)"/]...</span></dd>
+              </dl>
+            </div>
+          </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <a class="prev" href="javascript:void(0)"></a> <a class="next" href="javascript:void(0)"></a> </div>
+    <script type="text/javascript">
+		jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true});
+		</script>
+    <div class="index_news04">{dede:type typeid='13'} <a href="[field:typelink/]" title="MORE+">MORE+</a>{/dede:type} </div>
+  </div>
+  
+  <!--新闻资讯 end--> 
+  
+  <!--联系我们-->
+  <div class="index_contact">
+    <div class="index_news02">联系我们<span>Contact us</span></div>
+    <div class="index_contact01"> 
+      <script type="text/javascript" src="/skin/js/map.js"></script>
+      <div id="allmap" style="width:100%; height:300px;"></div>
+      <script type="text/javascript">
+		
+			$(function(){
+                var map = new BMap.Map("allmap");
+                map.centerAndZoom(new BMap.Point(125.330767,43.914504), 18);
+                var marker1 = new BMap.Marker(new BMap.Point(125.330767,43.914504));  // 创建标注
+                map.addOverlay(marker1);              // 将标注添加到地图中
+                marker1.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+                map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+				map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+				map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+				
+				//向地图中添加缩放控件
+				var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+				map.addControl(ctrl_nav);
+					//向地图中添加缩略图控件
+				var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+				map.addControl(ctrl_ove);
+					//向地图中添加比例尺控件
+				var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+				map.addControl(ctrl_sca);
+				
+				
+				
+				//创建信息窗口
+                var infoWindow1 = new BMap.InfoWindow("{dede:global.cfg_webname/}<BR>{dede:global.cfg_add/}");
+                marker1.openInfoWindow(infoWindow1);
+			});
+		
+        </script> 
+    </div>
+    <div class="index_contact02">
+      <ul>
+        <li>电话：{dede:global.cfg_tel/}</li>
+        <li style=" background:url(/skin/images/co02.png) no-repeat 6px 7px;">邮箱：{dede:global.cfg_email/}</li>
+        <li style=" background:url(/skin/images/co03.png) no-repeat 6px 7px;">地址：{dede:global.cfg_add/}</li>
+      </ul>
+    </div>
+  </div>
+  <!--联系我们 end--> 
+  
+</div>
+<div class="clear"></div>
+<!-- footer --> 
+
+<!--footer--> 
+{dede:include filename="footer.htm"/}
+</body>
+</html>

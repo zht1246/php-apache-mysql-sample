@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="/skin/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="/skin/css/jquery.bxslider.css" />
+<script type="text/javascript" src="/skin/js/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.superslide.2.1.1.js"></script>
+<script type="text/javascript" src="/skin/js/form.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<script type="text/javascript" src="/skin/js/jquery.bxslider.js"></script>
+<style>
+.theme_color {
+	background-color: #9c541a;
+}
+</style>
+<script type="text/javascript" src="/skin/js/formcheck.js"></script>
+</head>
+<!-- 头部 -->
+
+{dede:include filename="head.htm"/} 
+<!--g_nav end-->
+<div class="clear"></div>
+
+<!-- 头部 end --> 
+
+<!-- banner --> 
+<a>
+<div class="sub_banner" style=" background:url(/skin/images/banner.jpg) no-repeat top center;">
+  <div class="sub_banner_line"><img src="/skin/images/sub03.png" /></div>
+</div>
+</a> <!-- banner --> 
+
+<!-- 图标导航 -->
+<div class="product sub_pro"> 
+  <!--left--> 
+  
+  <!--left end-->
+  <div class="product03">
+    <div class="content_com_title">
+      <h2><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></h2>
+      <div class="bread"> 当前位置：{dede:field name='position'/} </div>
+    </div>
+    <div class="content">
+      <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+        <ul class="msg_ul">
+          <li>
+            <p>标题<span>*</span></p>
+            <input name="title" type="text" id="title" class="msg_input"/>
+            <div class="info"><span class="Validform_checktip"></span></div>
+          </li>
+          <li>
+            <p>姓名<span>*</span></p>
+            <input name="name" type="text" id="name" class="msg_input"/>
+            <div class="info"><span class="Validform_checktip"></span></div>
+          </li>
+          <li>
+            <p>手机号码<span>*</span></p>
+            <input name="tel" type="text" id="tel" class="msg_input"/>
+            <div class="info"><span class="Validform_checktip"></span></div>
+          </li>
+          <li>
+            <p>留言<span>*</span></p>
+            <textarea  name="content" id="content"  class="msg_textarea"></textarea>
+            <div class="info"><span class="Validform_checktip"></span></div>
+          </li>
+          <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,text;title,text" />
+          <input type="hidden" name="dede_fieldshash" value="5dd36822c61a9d051acca1466b5819a1" />
+          <li>
+            <p></p>
+            <input type="submit" class="msg_submit theme_color" title="提   交" value="提   交"/>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!-- 图标导航 end--> 
+
+<!-- footer --> 
+
+<!--footer--> 
+{dede:include filename="footer.htm"/}
+</body></html>

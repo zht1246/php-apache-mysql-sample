@@ -1,0 +1,25 @@
+<div class="sub_pro01">
+  <div class="sub_pro02">
+    <div class="product07"><b>产品展示</b></div>
+    <!--left nav-->
+    <div class="sidenav">
+      <ul>
+        {dede:channel type='son' typeid='2' currentstyle="
+        <li><a href='~typelink~' class='sidenava cu'>
+          <p>~typename~</p>
+          </a></li>
+        "}
+        <li> <a href="[field:typeurl/]" title="[field:typename/]" class="sidenava">
+          <p><!----> [field:typename/]</p>
+          </a> </li>
+        {/dede:channel}
+      </ul>
+    </div>
+  </div>
+  <div class="sub_lx">
+    <div class="sub_lx01">咨询热线<br />
+      {dede:global.cfg_tel/}<br />
+      地址：{dede:global.cfg_add/}<br />
+      传真：{dede:global.cfg_fax/}</div>
+  </div>
+</div>
